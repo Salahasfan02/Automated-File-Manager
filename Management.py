@@ -1,3 +1,4 @@
+#Import the necessary Libraries
 from os import scandir, rename
 from os.path import splitext, exists, join
 from shutil import move
@@ -8,15 +9,16 @@ import logging
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-
+#inserting the source diraction of the file you need to organize
 source_dir = "C:\\Users\\satan\\Downloads"
+#inserting the files path of each file type 
 dest_dir_sfx = "C:\\Users\\satan\\OneDrive\\Desktop\\Organized\\SFX"
 dest_dir_music = "C:\\Users\\satan\\OneDrive\\Desktop\\Organized\\Music"
 dest_dir_video = "C:\\Users\\satan\\OneDrive\\Desktop\\Organized\\Video"
 dest_dir_image = "C:\\Users\\satan\\OneDrive\\Desktop\\Organized\\Image"
 dest_dir_documents = "C:\\Users\\satan\\OneDrive\\Desktop\\Organized\\Documents"
 
-
+#identifing the extentons of each file type
 image_extensions = [".jpg", ".jpeg", ".jpe", ".jif", ".jfif", ".jfi", ".png", ".gif", ".webp", ".tiff", ".tif", ".psd", ".raw", ".arw", ".cr2", ".nrw",
                     ".k25", ".bmp", ".dib", ".heif", ".heic", ".ind", ".indd", ".indt", ".jp2", ".j2k", ".jpf", ".jpf", ".jpx", ".jpm", ".mj2", ".svg", ".svgz", ".ai", ".eps", ".ico"]
 
